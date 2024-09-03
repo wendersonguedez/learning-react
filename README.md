@@ -108,5 +108,3 @@ A aplicação estará disponível em `http://localhost:3000`.
 - Criar componentes reutilizáveis e entender o ciclo de vida dos componentes React.
 
 ---
-
-Este é um projeto em constante evolução à medida que continuo meus estudos. Qualquer sugestão ou comentário é bem-vindo!
