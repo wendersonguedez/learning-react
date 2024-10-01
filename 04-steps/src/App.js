@@ -4,7 +4,12 @@ const messages = [
   "Invest your new income 🤑",
 ];
 export default function App() {
-  const step = 1;
+  let step = 1;
+
+  const handlePreviousValue = (step) => {
+    console.log(step)
+    step++;
+  };
 
   return (
     <div className="steps">
@@ -17,8 +22,12 @@ export default function App() {
       <p className="message">{messages[step - 1]}</p>
 
       <div className="buttons">
-        <button style={{ backgroundColor: '#7950f2', color: '#fff' }}>Previous</button>
-        <button style={{ backgroundColor: '#7950f2', color: '#fff' }}>Next</button>
+        <button style={{ backgroundColor: '#7950f2', color: '#fff' }} onClick={() => handlePreviousValue(step)}>
+          Previous
+        </button>
+        <button style={{ backgroundColor: '#7950f2', color: '#fff' }}>
+          Next
+        </button>
       </div>
 
     </div>
