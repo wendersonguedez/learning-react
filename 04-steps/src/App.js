@@ -5,6 +5,7 @@ const messages = [
   "Apply for jobs 💼",
   "Invest your new income 🤑",
 ];
+
 export default function App() {
   /**
  * - step: armazena o valor do step atual, inicializado em 1, devido o 'useState(1)'
