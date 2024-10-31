@@ -13,13 +13,25 @@ export default function App() {
  *    - Quando chamada, setStep atualiza step com o novo valor,
  *      e o componente será re-renderizado com o valor atualizado de step.
  */
+  // let [step, setStep] = useState(1);
   const [step, setStep] = useState(1);
+  const [test, setTest] = useState({ name: 'wend' });
 
   function handleNext() {
     if (step < 3) {
       setStep(step + 1);
+
+      // má prática!! tendo em vista que em situações mais complexas, isso não irá funcionar.
+      // test.name = 'wenderson';
+
+      // caso realmente queira atualizar uma propriedade dentro de um objeto, basta passar o nome da propriedade
+      // e o novo valor, chamando a função setTest.
+      setTest({ name: 'vanderson' });
     }
     return;
+
+    // step = step + 1; maneira errada de se atualizar o valor de step.
+
   };
 
   function handlePrevious() {
@@ -37,7 +49,9 @@ export default function App() {
         <div className={step >= 3 ? 'active' : ''}>3</div>
       </div>
 
-      <p className="message">{messages[step - 1]}</p>
+      <p className="message">
+        {messages[step - 1]} { test.name }
+      </p>
 
       <div className="buttons">
         <button style={{ backgroundColor: '#7950f2', color: '#fff' }} onClick={handlePrevious}>
